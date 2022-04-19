@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: base-ruby:2.7
+    env_file:
+      - .env
+    ports:
+      - "8000:80"
+    volumes:
+      - logs:/var/log/artifakt
+
+volumes:
+  logs:
+  
+  
+  
+  
